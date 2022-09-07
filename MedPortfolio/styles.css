@@ -1,0 +1,77 @@
+* {
+    font-family: 'Roboto';
+}
+header {
+    border-bottom: 3px outset rgba(124, 124, 124, 0.384);
+}
+
+nav { 
+    display: inline;
+}
+
+nav a {
+    text-decoration: none; color:black ;
+    font-weight: 900; font-size: 18px;
+    padding: 14px;
+}
+
+#about {
+    justify-content: space-between ; 
+    display: flex; 
+}
+
+.aboutImg {
+    padding: 80px ;
+    width: 354px;
+    height: 357px;
+}
+
+.aboutMe {
+    padding: 120px 70px  ;
+}
+
+.aboutMe , p {
+    font-size: 29px;
+}
+
+#resume {
+    border: 7px solid black;
+    padding: 40px 300px;
+    margin-right: 50px;
+}
+
+#work {
+    justify-content: space-between;
+    display: flex;padding: 50px 300px;
+    border: 4px solid black;
+    margin-left: 200px; 
+}
+
+.contactForm {
+    padding: 50px 300px; 
+    border: 4px solid black;
+    margin-right: 200px; 
+}
+
+footer {
+    background-color: black; 
+    padding: 50px 0px 0px 0px; 
+    margin-top: 140px;
+}
+
+.footerContent {
+    justify-content: space-between; 
+    display: flex;
+}
+
+#home {
+    margin: 25px; 
+    color: azure;
+}
+
+.footerContent, a {
+    text-decoration: none; color:rgb(255, 255, 255) ;
+    font-weight: 900; 
+    font-size: 18px; 
+    padding: 14px;
+}
