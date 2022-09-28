@@ -10,8 +10,6 @@ body{
     background-color: #fff;
     position: fixed;
     top: 0;
-    position: fixed;
-    top: 0;
     left: 0;
     width: 100%;
     margin-left: 200px;
@@ -35,6 +33,7 @@ body{
     top: 0;
     left: 0;
     width: 100%;
+    
 } 
 
 .section-header {
@@ -104,27 +103,34 @@ li {
     background-color: #00b39b;
     height: 345px;
     width: 23%;
-    border-radius: 10px;
-    margin-left: 100px;
     padding: 2%;
+    border-radius: 10px;
+
 }
 
 .main-cards {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-   
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100%;
+    column-gap: 30px;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 #card1 {
     background-color: #00b39b;
+    width: 100%;
 
 }
 
 #card2 {
     background-color: #3d83df;
+    width: 100%;
+
 }
 
 #card3 {
     background-color: #1b2734;
+    width: 100%;
+
 }
