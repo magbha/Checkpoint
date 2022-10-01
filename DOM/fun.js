@@ -52,19 +52,21 @@ for (let minBtn of min ) {
 
 function price() {
     for (let p in showPrice) {
-    console.log(counter[p])
+    
    showPrice[p].innerHTML = showPrice[p].dataset.price * counter[p].innerHTML;
 }}
 
 
 function callTotal() {
     let prices = Array.from(document.querySelectorAll(".price"))
-    let sum = 0;
-    for (let i in prices) {
-        
-        sum += prices[i].innerHTML * counter[i].innerHTML;
-        
+    let prix = [];
+    for (let i of prices) {
+        let f = Number(i.innerHTML)
+        prix.push(f);   
     }
-    document.querySelector(".total").innerHTML = `TOTAL: ${sum} $`;
+    let total = prix.reduce((nTotal , item) => {
+        return item + nTotal
+    } ,0)
+    document.querySelector(".total").innerHTML = `TOTAL: ${total} $`;
 
 }
