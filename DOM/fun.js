@@ -4,6 +4,10 @@ let plus = Array.from(document.querySelectorAll(".plus"))
 let min = Array.from(document.querySelectorAll(".min"))
 let card = Array.from(document.querySelectorAll(".items"))
 let likes = Array.from(document.querySelectorAll(".like"))
+let showPrice = Array.from(document.querySelectorAll(".price"))
+let counter = Array.from(document.querySelectorAll(".count"))
+
+
 
 for (let i of remove) (
 i.addEventListener('click' , function(event) {
@@ -25,7 +29,9 @@ for (let like of likes) (
 for (let plusBtn of plus ) {
        plusBtn.addEventListener('click', function(){
         plusBtn.nextElementSibling.innerHTML++;
-        callTotal()
+        price();
+        callTotal();
+        
     })
     
 }
@@ -35,14 +41,23 @@ for (let minBtn of min ) {
         minBtn.previousElementSibling.innerHTML > 0 ?
         minBtn.previousElementSibling.innerHTML-- :
         null
-        callTotal()
+        price();
+        callTotal();
+        
     })
     
 };
-var k = 0;
+
+
+
+function price() {
+    for (let p in showPrice) {
+    console.log(counter[p])
+   showPrice[p].innerHTML = showPrice[p].dataset.price * counter[p].innerHTML;
+}}
+
 
 function callTotal() {
-    let counter = Array.from(document.querySelectorAll(".count"))
     let prices = Array.from(document.querySelectorAll(".price"))
     let sum = 0;
     for (let i in prices) {
@@ -50,6 +65,6 @@ function callTotal() {
         sum += prices[i].innerHTML * counter[i].innerHTML;
         
     }
-    document.querySelector(".total").innerHTML = "TOTAL" + sum;
+    document.querySelector(".total").innerHTML = `TOTAL: ${sum} $`;
 
 }
