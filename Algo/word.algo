@@ -1,0 +1,15 @@
+ALGORITHM word_nbr
+
+VAR 
+    str : STRING := "This is the algorithm of finding words number";
+    count : INTEGER := 1;
+
+BEGIN 
+    FOR (i = 0 ; i < str.length() ; i++) DO 
+        IF (str.charAt[i] == '') THEN
+            count++;
+        END_IF
+    END_FOR
+    Write(count)
+END
+
